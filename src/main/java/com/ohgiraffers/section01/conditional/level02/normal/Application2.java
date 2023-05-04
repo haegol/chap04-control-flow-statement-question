@@ -1,9 +1,30 @@
 package com.ohgiraffers.section01.conditional.level02.normal;
 
+import java.util.Scanner;
+
 public class Application2 {
 	
 	public static void main(String[] args) {
-		
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("체중을 입력해 주세요 : ");
+		double num1 = sc.nextDouble();
+
+		System.out.println("신장을 입력해 주세요 : ");
+		double num2 = sc.nextDouble();
+
+		double num3 = num1 / (num2 * num2);
+
+		if (num3 < 20) {
+			System.out.println("당신은 저체중 입니다.");
+		} else if (num3 < 25) {
+			System.out.println("당신은 정상체중 입니다.");
+		} else if (num3 < 30) {
+			System.out.println("당신은 과체중 입니다.");
+		} else {
+			System.out.println("당신은 비만 입니다.");
+		}
+
 		/* BMI(신체질량지수)를 계산하고, 계산된 값에 따라 
 		 * 저체중(20 미만)인 경우 "당신은 저체중 입니다.", 
 		 * 정상체중(20이상 25미만)인 경우 "당신은 정상체중 입니다.", 
